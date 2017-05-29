@@ -22,7 +22,4 @@ erasaur:meteor-lodash
 kadira:flow-router
 kadira:blaze-layout
 aldeed:simple-schema
-semantic:ui
-juliancwirko:postcss
-less@2.7.9
-jquery@1.11.10
+semantic:ui-css@=2.1.2

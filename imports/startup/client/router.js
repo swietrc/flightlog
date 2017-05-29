@@ -12,6 +12,6 @@ FlowRouter.route('/', {
 FlowRouter.route('/u/home', {
     name: 'uhome',
     action: function(params, queryParams) {
-        BlazeLayout.render("MainLayout", {content: "home"});
+        BlazeLayout.render("MainLayout", {content: "userHome"});
     }
 });

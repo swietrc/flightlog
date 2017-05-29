@@ -1,0 +1,34 @@
+<template name="MainLayout">
+    {{> _header}}
+  <div class="ui container">
+    {{> Template.dynamic template=content }}
+  </div>
+
+</template>
+
+<template name="userHome">
+    <button class="ui labeled icon button">
+        <i class="heart icon"></i>
+        Kœur
+    </button>
+    <button class="ui labeled icon massive button">
+        <i class="heart icon"></i>
+        <i class="eu flag"></i>
+    </button>
+    <table class="ui right aligned inverted blue table visible">
+        <thead>
+            <tr>
+                <th class="left aligned">Colonne 1</th>
+                <th>Colonne 2</th>
+                <th>Colonne 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="left aligned">Coucou</td>
+                <td>Les</td>
+                <td>Coucou</td>
+            </tr>
+        </tbody>
+    </table>
+</template>
