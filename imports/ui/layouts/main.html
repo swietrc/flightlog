@@ -1,12 +1,13 @@
 <template name="MainLayout">
     {{> _header}}
-  <div class="ui container">
-    {{> Template.dynamic template=content }}
-  </div>
+    <div class="ui container">
+        {{> Template.dynamic template=content }}
+    </div>
 
 </template>
 
 <template name="userHome">
+
     <button class="ui labeled icon button">
         <i class="heart icon"></i>
         Kœur
@@ -18,17 +19,44 @@
     <table class="ui right aligned inverted blue table visible">
         <thead>
             <tr>
-                <th class="left aligned">Colonne 1</th>
-                <th>Colonne 2</th>
-                <th>Colonne 3</th>
+                <th class="left aligned">Pilote</th>
+                <th>Fusée</th>
+                <th>Devise</th>
             </tr>
         </thead>
         <tbody>
+            {{#each log in logs }}
             <tr>
-                <td class="left aligned">Coucou</td>
-                <td>Les</td>
-                <td>Coucou</td>
+                <td class="left aligned">{{log.pilot}}</td>
+                <td>{{log.aircraft}}</td>
+                <td>{{log.moto}}</td>
             </tr>
+            {{/each}}
         </tbody>
     </table>
+    <div class="ui horizontal divider">
+        Or
+    </div>
+    <div class="ui center aligned basic segment">
+        <form class="ui form" id="new_flight_form">
+            <div class="three fields">
+                <div class="field">
+                    <label>Name</label>
+                    <input name="name" type="text" placeholder="Name">
+                </div>
+                <div class="field">
+                    <label for="rocket">Rocket</label>
+                    <input type="text" name="rocket" placeholder="Rocket">
+                </div>
+                <div class="field">
+                    <label for="motto">Motto</label>
+                    <input type="text" name="motto" placeholder="Motto">
+                </div>
+            </div>
+            <div class="ui teal labeled icon button" id="new_flight">
+                Add New Flight
+                <i class="add icon"></i>
+            </div>
+        </form>
+    </div>
 </template>
